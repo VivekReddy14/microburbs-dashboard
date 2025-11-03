@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Suburbs from "./components/Suburbs";
+import Property from "./components/Property";
+import "./App.css";
 
 function App() {
+  const [activeTab, setActiveTab] = useState("suburbs");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <h1>Microburbs Insights Dashboard</h1>
       </header>
+
+      <div className="tab-buttons">
+        <button
+          className={activeTab === "suburbs" ? "active" : ""}
+          onClick={() => setActiveTab("suburbs")}
+        >
+          🏙️ Suburbs
+        </button>
+        <button
+          className={activeTab === "property" ? "active" : ""}
+          onClick={() => setActiveTab("property")}
+        >
+          🏠 Property
+        </button>
+      </div>
+
+      <div className="content">
+        {activeTab === "suburbs" && <Suburbs />}
+        {activeTab === "property" && <Property />}
+      </div>
     </div>
   );
 }
