@@ -8,32 +8,33 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState("suburb");
 
   return (
-    <div className="home-wrapper">
+    
+      <div className="home-wrapper">
 
-      {/* Toggle buttons */}
-      <div className="toggle-tabs">
-        <button
-          className={activeTab === "suburb" ? "tab active" : "tab"}
-          onClick={() => setActiveTab("suburb")}
-        >
-          Suburbs
-        </button>
+        {/* Toggle buttons */}
+        <div className="toggle-tabs">
+          <button
+            className={activeTab === "suburb" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("suburb")}
+          >
+            Suburbs
+          </button>
 
-        <button
-          className={activeTab === "property" ? "tab active" : "tab"}
-          onClick={() => setActiveTab("property")}
-        >
-          Property
-        </button>
+          <button
+            className={activeTab === "property" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("property")}
+          >
+            Property
+          </button>
+        </div>
+
+        {/* Content below */}
+        <div className="tab-content">
+          {activeTab === "suburb" && <ListSuburbs />}
+          {activeTab === "property" && <ListProperties />}
+        </div>
+
       </div>
-
-      {/* Content below */}
-      <div className="tab-content">
-        {activeTab === "suburb" && <ListSuburbs />}
-        {activeTab === "property" && <ListProperties />}
-      </div>
-
-    </div>
   );
 };
 
