@@ -1,0 +1,38 @@
+.home-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.toggle-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.tab {
+  padding: 10px 22px;
+  font-size: 16px;
+  border: 1px solid #1976d2;
+  background: white;
+  color: #1976d2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tab:hover {
+  background: #ebf4ff;
+}
+
+.tab.active {
+  background: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+
+.tab-content {
+  margin-top: 10px;
+}
