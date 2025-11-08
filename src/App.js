@@ -1,37 +1,17 @@
-import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 import Suburbs from "./components/Suburbs";
+import ListProperties from "./components/ListProperties";
 import Property from "./components/Property";
-import "./App.css";
 
 function App() {
-  const [activeTab, setActiveTab] = useState("suburbs");
-
   return (
-    <div className="App">
-      <header className="header">
-        <h1>Microburbs Insights Dashboard</h1>
-      </header>
-
-      <div className="tab-buttons">
-        <button
-          className={activeTab === "suburbs" ? "active" : ""}
-          onClick={() => setActiveTab("suburbs")}
-        >
-          🏙️ Suburbs
-        </button>
-        <button
-          className={activeTab === "property" ? "active" : ""}
-          onClick={() => setActiveTab("property")}
-        >
-          🏠 Property
-        </button>
-      </div>
-
-      <div className="content">
-        {activeTab === "suburbs" && <Suburbs />}
-        {activeTab === "property" && <Property />}
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/suburb/:name" element={<Suburbs />} />
+      <Route path="/properties" element={<ListProperties />} />
+      <Route path="/property/:id" element={<Property />} />
+    </Routes>
   );
 }
 
