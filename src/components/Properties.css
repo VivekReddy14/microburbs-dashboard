@@ -14,7 +14,7 @@
   --shadow-2: 0 4px 12px rgba(0,0,0,0.12);
   --radius: 10px;
   --radius-sm: 8px;
-  --font: Arial, sans-serif;
+  --font: "Poppins", sans-serif;
 }
 
 .loading {

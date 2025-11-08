@@ -1,0 +1,15 @@
+.main-header {
+  background-color: #1976d2;
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.main-header h1 {
+  margin: 0;
+}
