@@ -2,7 +2,6 @@
   "name": "microburbs-dashboard",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://www.microburbs.com.au",
   "homepage": "https://VivekReddy14.github.io/microburbs-dashboard",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
