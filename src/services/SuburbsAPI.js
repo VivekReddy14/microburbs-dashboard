@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "/report_generator/api/suburb";
+const BASE_URL = "https://www.microburbs.com.au/report_generator/api/suburb";
 
 
 const sampleres={
